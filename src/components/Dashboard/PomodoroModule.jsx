@@ -169,8 +169,8 @@ const PomodoroModule = () => {
   return (
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
-      <div className="flex-shrink-0 px-6 py-4 border-b" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
-        <h2 className="text-xl font-semibold">⏱️ Focus Timer</h2>
+      <div className="flex-shrink-0 px-6 py-4 border-b border-gray-200 dark:border-border-subtle">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-text-primary">⏱️ Focus Timer</h2>
       </div>
 
       {/* Content - centered vertically */}
@@ -181,7 +181,7 @@ const PomodoroModule = () => {
           className="text-7xl font-bold tabular-nums mb-6 tracking-tight"
           style={{
             fontFamily: 'ui-monospace, monospace',
-            color: isActive ? 'var(--color-primary)' : '#ffffff'
+            color: isActive ? 'var(--color-primary)' : undefined
           }}
         >
           {formatTime(timeLeft)}
@@ -207,38 +207,33 @@ const PomodoroModule = () => {
           </button>
           <button
             onClick={resetTimer}
-            className="px-6 py-3 rounded-lg border transition-colors hover:bg-white hover:bg-opacity-5"
-            style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}
+            className="px-6 py-3 rounded-lg border border-gray-300 dark:border-white/20 transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
           >
             <RotateCcw className="w-5 h-5" />
           </button>
         </div>
 
         {/* Session counter */}
-        <div className="text-sm mb-4" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+        <div className="text-sm mb-4 text-gray-600 dark:text-text-tertiary">
           Session <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>{timerState.sessionsCompleted}</span> / {SESSIONS_UNTIL_LONG_BREAK} today
         </div>
 
         {/* Current task */}
         {timerState.mode === 'work' && (
           <div
-            className="w-full max-w-[280px] border rounded-lg p-3 text-center"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-              borderColor: 'rgba(255, 255, 255, 0.1)'
-            }}
+            className="w-full max-w-[280px] border border-gray-200 dark:border-white/10 rounded-lg p-3 text-center bg-gray-50 dark:bg-white/5"
           >
-            <div className="text-xs mb-1" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+            <div className="text-xs mb-1 text-gray-500 dark:text-text-tertiary">
               🎯 Working on:
             </div>
-            <div className="text-sm font-medium truncate" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+            <div className="text-sm font-medium truncate text-gray-900 dark:text-text-secondary">
               {getCurrentTask()}
             </div>
           </div>
         )}
 
         {/* Mode indicator */}
-        <div className="mt-4 text-xs" style={{ color: 'rgba(255, 255, 255, 0.4)' }}>
+        <div className="mt-4 text-xs text-gray-500 dark:text-text-tertiary">
           {getModeLabel()} · Next: {getNextModeLabel()}
         </div>
       </div>

@@ -32,11 +32,11 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
   };
 
   return (
-    <div className="group card hover:border-opacity-50 transition-all duration-200">
+    <div className="group card transition-all duration-200">
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
-          <h3 className="font-bold text-base mb-2">{snippet.title}</h3>
+          <h3 className="font-bold text-base mb-2 text-gray-900 dark:text-text-primary">{snippet.title}</h3>
           <div className="flex items-center gap-2 flex-wrap">
             <span
               className={`inline-block px-2 py-0.5 rounded text-xs border ${
@@ -54,16 +54,12 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
 
       {/* Description */}
       {snippet.description && (
-        <p className="text-sm text-gray-400 mb-3">{snippet.description}</p>
+        <p className="text-sm text-gray-600 dark:text-text-tertiary mb-3">{snippet.description}</p>
       )}
 
       {/* Code Block with Syntax Highlighting */}
       <div
         className="mb-3 rounded overflow-hidden max-h-64 overflow-y-auto"
-        style={{
-          backgroundColor: '#2d2d2d',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-        }}
       >
         <pre className="!m-0 !p-4 text-sm overflow-x-auto">
           <code className={`language-${snippet.language}`}>
@@ -78,11 +74,7 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
           {snippet.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded text-xs"
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                color: '#9ca3af',
-              }}
+              className="px-2 py-0.5 rounded text-xs bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-text-tertiary"
             >
               {tag}
             </span>
@@ -91,8 +83,8 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
       )}
 
       {/* Footer */}
-      <div className="flex items-center justify-between pt-3 border-t border-gray-700">
-        <span className="text-xs text-gray-500">
+      <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-border-subtle">
+        <span className="text-xs text-gray-500 dark:text-text-tertiary">
           Copied {snippet.copiedCount} {snippet.copiedCount === 1 ? 'time' : 'times'}
         </span>
 
@@ -118,10 +110,10 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
           {/* Edit Button */}
           <button
             onClick={() => onEdit(snippet)}
-            className="p-1.5 rounded hover:bg-white hover:bg-opacity-10 transition-colors"
+            className="p-1.5 rounded hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             aria-label="Edit snippet"
           >
-            <Edit className="w-4 h-4 text-gray-400" />
+            <Edit className="w-4 h-4 text-gray-600 dark:text-text-tertiary" />
           </button>
 
           {/* Delete Button */}

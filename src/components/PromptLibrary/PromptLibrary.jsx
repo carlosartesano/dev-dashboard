@@ -184,7 +184,7 @@ const PromptLibrary = () => {
         <div className="space-y-3">
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-text-tertiary" />
             <input
               type="text"
               className="input w-full pl-10"
@@ -225,13 +225,13 @@ const PromptLibrary = () => {
               onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                 showFavoritesOnly
-                  ? 'border-yellow-400 bg-yellow-400 bg-opacity-20'
-                  : 'border-gray-600'
+                  ? 'border-yellow-400 bg-yellow-400 bg-opacity-20 text-gray-900 dark:text-text-primary'
+                  : 'border-gray-300 dark:border-border-subtle text-gray-700 dark:text-text-secondary'
               }`}
             >
               <Star
                 className={`w-4 h-4 ${
-                  showFavoritesOnly ? 'fill-yellow-400 text-yellow-400' : 'text-gray-400'
+                  showFavoritesOnly ? 'fill-yellow-400 text-yellow-400' : 'text-gray-500 dark:text-text-tertiary'
                 }`}
               />
               <span className="text-sm">
@@ -240,7 +240,7 @@ const PromptLibrary = () => {
             </button>
 
             {/* Results Count */}
-            <span className="text-sm text-gray-400 ml-auto">
+            <span className="text-sm text-gray-600 dark:text-text-tertiary ml-auto">
               {filteredPrompts.length} {filteredPrompts.length === 1 ? 'prompt' : 'prompts'}
             </span>
           </div>

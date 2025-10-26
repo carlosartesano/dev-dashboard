@@ -52,7 +52,7 @@ const Pagination = ({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white hover:bg-opacity-10 disabled:hover:bg-transparent"
+          className="flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-white/10 disabled:hover:bg-transparent text-gray-700 dark:text-text-secondary"
           aria-label="Previous page"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -64,7 +64,7 @@ const Pagination = ({
           {pageNumbers.map((page, index) => {
             if (page === '...') {
               return (
-                <span key={`ellipsis-${index}`} className="px-3 py-2 text-gray-400">
+                <span key={`ellipsis-${index}`} className="px-3 py-2 text-gray-500 dark:text-text-tertiary">
                   ...
                 </span>
               );
@@ -79,7 +79,7 @@ const Pagination = ({
                 className={`w-10 h-10 rounded-lg transition-all duration-200 font-medium text-sm ${
                   isCurrentPage
                     ? 'bg-primary text-white font-bold'
-                    : 'hover:bg-white hover:bg-opacity-10 text-gray-300'
+                    : 'hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-text-secondary'
                 }`}
                 aria-label={`Page ${page}`}
                 aria-current={isCurrentPage ? 'page' : undefined}
@@ -94,7 +94,7 @@ const Pagination = ({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white hover:bg-opacity-10 disabled:hover:bg-transparent"
+          className="flex items-center gap-1 px-4 py-2 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-white/10 disabled:hover:bg-transparent text-gray-700 dark:text-text-secondary"
           aria-label="Next page"
         >
           <span className="hidden sm:inline">Next</span>
@@ -103,7 +103,7 @@ const Pagination = ({
       </div>
 
       {/* Info Text */}
-      <div className="text-sm text-gray-400">
+      <div className="text-sm text-gray-600 dark:text-text-tertiary">
         Showing {startIndex}-{endIndex} of {totalItems} {itemName}
       </div>
     </div>

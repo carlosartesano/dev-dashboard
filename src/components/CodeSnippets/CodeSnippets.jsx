@@ -160,7 +160,7 @@ const CodeSnippets = () => {
 
         <div className="space-y-3">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-text-tertiary" />
             <input
               type="text"
               className="input w-full pl-10"
@@ -201,7 +201,7 @@ const CodeSnippets = () => {
               <option value="alphabetical">Alphabetical</option>
             </select>
 
-            <span className="text-sm text-gray-400 ml-auto">
+            <span className="text-sm text-gray-600 dark:text-text-tertiary ml-auto">
               {filteredSnippets.length} {filteredSnippets.length === 1 ? 'snippet' : 'snippets'}
             </span>
           </div>
