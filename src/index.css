@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary colors - softer indigo */
+  --color-primary: #818cf8;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+
+  /* Accent colors - emerald */
+  --color-accent: #34d399;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+
+  /* Dark theme - deeper, more refined */
+  --color-dark-deepest: #0a0e1a;
+  --color-dark-deeper: #0f1419;
+  --color-dark-bg: #0f1419;
+  --color-dark-base: #161b22;
+  --color-dark-elevated: #1c2128;
+  --color-dark-card: #1c2128;
+  --color-dark-overlay: #22272e;
+
+  /* Borders - subtle variations */
+  --color-border-subtle: #30363d;
+  --color-border-default: #444c56;
+  --color-border-muted: #6e7681;
+  --color-dark-border: #30363d;
+
+  /* Text colors - better hierarchy */
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #adbac7;
+  --color-text-tertiary: #768390;
+  --color-text-placeholder: #545d68;
+
+  /* Status colors */
+  --color-success: #2ea673;
+  --color-warning: #d29922;
+  --color-error: #d9404f;
+
+  /* Light theme */
+  --color-light-bg: #f9fafb;
+  --color-light-card: #ffffff;
+  --color-light-border: #e5e7eb;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+
+  body.dark {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-primary);
+  }
+
+  body.light {
+    background-color: var(--color-light-bg);
+    color: #111827;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg shadow-lg p-6 transition-all duration-300;
+  }
+
+  .dark .card {
+    background-color: var(--color-dark-card);
+    border: 1px solid var(--color-dark-border);
+  }
+
+  .light .card {
+    background-color: var(--color-light-card);
+    border: 1px solid var(--color-light-border);
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    @apply text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all duration-200 font-medium;
+  }
+
+  .input {
+    @apply px-4 py-2 rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2;
+    focus-ring-color: var(--color-primary);
+  }
+
+  .dark .input {
+    background-color: var(--color-dark-base);
+    border-color: var(--color-border-default);
+    color: var(--color-text-primary);
+  }
+
+  .dark .input::placeholder {
+    color: var(--color-text-placeholder);
+  }
+
+  .light .input {
+    background-color: white;
+    border-color: var(--color-light-border);
+    color: #111827;
+  }
+
+  .light .input::placeholder {
+    color: #6b7280;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-base);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-dark-base);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-subtle);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-border-default);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background-color: var(--color-light-border);
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+.dark * {
+  scrollbar-color: var(--color-border-subtle) var(--color-dark-base);
+}
+
+.light * {
+  scrollbar-color: var(--color-light-border) transparent;
+}
+
+/* Prism.js Customization */
+pre[class*="language-"] {
+  background-color: #2d2d2d !important;
+  margin: 0 !important;
+  border-radius: 0.5rem;
+}
+
+code[class*="language-"] {
+  background-color: transparent !important;
+  text-shadow: none !important;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Token colors for Prism Tomorrow Night theme */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f2777a;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #99cc99;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #67cdcc;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #cc99cc;
+}
+
+.token.function,
+.token.class-name {
+  color: #ffcc66;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #f99157;
+}
+
+/* Light theme overrides for Prism */
+.light pre[class*="language-"] {
+  background-color: #f5f5f5 !important;
+  border: 1px solid #e0e0e0;
+}
+
+.light .token.comment,
+.light .token.prolog,
+.light .token.doctype,
+.light .token.cdata {
+  color: #708090;
+}
+
+.light .token.punctuation {
+  color: #999;
+}
+
+.light .token.property,
+.light .token.tag,
+.light .token.boolean,
+.light .token.number,
+.light .token.constant,
+.light .token.symbol,
+.light .token.deleted {
+  color: #905;
+}
+
+.light .token.selector,
+.light .token.attr-name,
+.light .token.string,
+.light .token.char,
+.light .token.builtin,
+.light .token.inserted {
+  color: #690;
+}
+
+.light .token.operator,
+.light .token.entity,
+.light .token.url,
+.light .language-css .token.string,
+.light .style .token.string {
+  color: #9a6e3a;
+}
+
+.light .token.atrule,
+.light .token.attr-value,
+.light .token.keyword {
+  color: #07a;
+}
+
+.light .token.function,
+.light .token.class-name {
+  color: #dd4a68;
+}
+
+.light .token.regex,
+.light .token.important,
+.light .token.variable {
+  color: #e90;
+}
