@@ -26,7 +26,7 @@ const CodeSnippets = () => {
   // Use resize hook with different storage key
   const { height, isResizing, handleMouseDown, setHeight } = useResize(
     'dev-dashboard-snippet-height',
-    500,  // default height
+    700,  // default height
     400,  // min height
     1000  // max height
   );

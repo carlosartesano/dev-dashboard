@@ -26,7 +26,7 @@ const PromptLibrary = () => {
   // Use resize hook
   const { height, isResizing, handleMouseDown, setHeight } = useResize(
     'dev-dashboard-prompt-height',
-    500,  // default height
+    700,  // default height
     400,  // min height
     1000  // max height
   );
