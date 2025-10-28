@@ -28,11 +28,17 @@
   --color-border-muted: #6e7681;
   --color-dark-border: #30363d;
 
-  /* Text colors - better hierarchy */
-  --color-text-primary: #e6edf3;
-  --color-text-secondary: #adbac7;
-  --color-text-tertiary: #768390;
-  --color-text-placeholder: #545d68;
+  /* Text colors - pure white for dark mode, pure black for light mode */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-text-tertiary: #ffffff;
+  --color-text-placeholder: #ffffff;
+  
+  /* Light mode text colors - pure black */
+  --color-light-text-primary: #000000;
+  --color-light-text-secondary: #000000;
+  --color-light-text-tertiary: #000000;
+  --color-light-text-placeholder: #000000;
 
   /* Status colors */
   --color-success: #2ea673;
@@ -57,7 +63,53 @@
 
   body.light {
     background-color: var(--color-light-bg);
-    color: #111827;
+    color: var(--color-light-text-primary);
+  }
+
+  /* Force all text in light mode to be pure black */
+  body.light,
+  body.light * {
+    color: #000000 !important;
+  }
+
+  /* Override for white text on colored backgrounds in light mode */
+  body.light .btn-primary,
+  body.light .btn-primary * {
+    color: #ffffff !important;
+  }
+
+  /* Override for status colors and icons in light mode */
+  body.light .text-red-400,
+  body.light .text-green-400,
+  body.light .text-blue-400,
+  body.light .text-yellow-400,
+  body.light .text-purple-400,
+  body.light .text-amber-400,
+  body.light .text-cyan-400,
+  body.light .text-orange-400,
+  body.light .text-pink-400,
+  body.light .text-indigo-400 {
+    color: inherit !important;
+  }
+
+  /* Force all text in dark mode to be pure white */
+  body.dark,
+  body.dark * {
+    color: #ffffff !important;
+  }
+
+  /* Override for status colors and icons in dark mode */
+  body.dark .text-red-400,
+  body.dark .text-green-400,
+  body.dark .text-blue-400,
+  body.dark .text-yellow-400,
+  body.dark .text-purple-400,
+  body.dark .text-amber-400,
+  body.dark .text-cyan-400,
+  body.dark .text-orange-400,
+  body.dark .text-pink-400,
+  body.dark .text-indigo-400 {
+    color: inherit !important;
   }
 }
 
@@ -89,21 +141,21 @@
   .dark .input {
     background-color: var(--color-dark-base);
     border-color: var(--color-border-default);
-    color: var(--color-text-primary);
+    color: #ffffff;
   }
 
   .dark .input::placeholder {
-    color: var(--color-text-placeholder);
+    color: #ffffff;
   }
 
   .light .input {
     background-color: white;
     border-color: var(--color-light-border);
-    color: #111827;
+    color: var(--color-light-text-primary);
   }
 
   .light .input::placeholder {
-    color: #6b7280;
+    color: var(--color-light-text-primary);
   }
 }
 

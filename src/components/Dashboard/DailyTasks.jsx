@@ -51,7 +51,7 @@ const DailyTasks = () => {
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0">
-        <h2 className="text-xl font-bold mb-4">🎯 Today's Focus</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white mb-4">🎯 Today's Focus</h2>
 
         {/* Input Section */}
         <div className="flex gap-2 mb-4">
@@ -76,7 +76,7 @@ const DailyTasks = () => {
       <div className="flex-1 overflow-y-auto mb-4">
         <div className="space-y-2">
           {tasks.length === 0 ? (
-            <div className="text-center py-8 text-gray-500 dark:text-text-tertiary text-sm">
+            <div className="text-center py-8 text-sm text-black dark:text-white">
               No tasks yet. Add one to get started!
             </div>
           ) : (
@@ -122,7 +122,7 @@ const DailyTasks = () => {
 
               {/* Task Text */}
               <span
-                className="flex-1 text-sm transition-all duration-200"
+                className="flex-1 text-base text-black dark:text-white transition-all duration-200"
                 style={{
                   textDecoration: task.completed ? 'line-through' : 'none',
                   opacity: task.completed ? 0.6 : 1,
@@ -148,7 +148,7 @@ const DailyTasks = () => {
       {/* Footer */}
       <div className="flex-shrink-0">
         {totalTasks > 0 && (
-          <div className="text-sm text-gray-600 dark:text-text-tertiary pt-3 border-t border-gray-200 dark:border-border-subtle">
+          <div className="text-sm text-black dark:text-white pt-3 border-t border-gray-200 dark:border-border-subtle">
             {totalTasks} {totalTasks === 1 ? 'task' : 'tasks'} · {completedTasks} completed
           </div>
         )}

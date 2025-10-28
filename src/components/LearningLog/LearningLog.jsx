@@ -121,7 +121,7 @@ const LearningLog = () => {
       {/* Header */}
       <div className="flex-shrink-0 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">📚 Learning Log</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white">📚 Learning Log</h2>
           <button
             onClick={handleNewLog}
             className="btn-primary flex items-center gap-2"
@@ -135,7 +135,7 @@ const LearningLog = () => {
         <div className="space-y-3">
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black dark:text-white" />
             <input
               type="text"
               className="input w-full pl-10"
@@ -157,7 +157,7 @@ const LearningLog = () => {
               <option value="week">By Week Number</option>
             </select>
 
-            <span className="text-sm text-gray-400 ml-auto">
+            <span className="text-sm text-black dark:text-white ml-auto">
               {filteredLogs.length} {filteredLogs.length === 1 ? 'entry' : 'entries'}
             </span>
           </div>
@@ -194,7 +194,7 @@ const LearningLog = () => {
         </>
       ) : (
         /* Empty State */
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-black dark:text-white">
           <p className="text-sm mb-2">
             {searchTerm ? 'No entries found matching your search.' : 'No learning log entries yet.'}
           </p>

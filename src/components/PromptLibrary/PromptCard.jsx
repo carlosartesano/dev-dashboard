@@ -61,21 +61,21 @@ const PromptCard = ({ prompt, onEdit, onDelete, onToggleFavorite, onCopy }) => {
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
-            <h3 className="font-bold text-base text-gray-900 dark:text-text-primary">{prompt.title}</h3>
+            <h3 className="font-bold text-base text-black dark:text-white">{prompt.title}</h3>
             <button
               onClick={() => onToggleFavorite(prompt.id)}
               className="transition-transform hover:scale-110"
             >
               <Star
                 className={`w-4 h-4 ${
-                  prompt.favorite ? 'fill-yellow-400 text-yellow-400' : 'text-gray-500 dark:text-text-tertiary'
+                  prompt.favorite ? 'fill-yellow-400 text-yellow-400' : 'text-black dark:text-white'
                 }`}
               />
             </button>
           </div>
           <span
             className={`inline-block px-2 py-0.5 rounded text-xs border ${
-              categoryColors[prompt.category] || 'bg-gray-500/20 text-gray-400'
+              categoryColors[prompt.category] || 'bg-gray-500/20 text-black dark:text-white'
             }`}
           >
             {prompt.category}
@@ -85,7 +85,7 @@ const PromptCard = ({ prompt, onEdit, onDelete, onToggleFavorite, onCopy }) => {
 
       {/* Template Preview */}
       <div
-        className="mb-3 p-3 rounded text-sm font-mono whitespace-pre-wrap break-words bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-text-secondary"
+        className="mb-3 p-3 rounded text-sm font-mono whitespace-pre-wrap break-words bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-black dark:text-white"
       >
         {isExpanded
           ? highlightVariables(prompt.template)
@@ -119,7 +119,7 @@ const PromptCard = ({ prompt, onEdit, onDelete, onToggleFavorite, onCopy }) => {
           {prompt.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded text-xs bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-text-tertiary"
+              className="px-2 py-0.5 rounded text-xs bg-gray-200 dark:bg-white/10 text-black dark:text-white"
             >
               {tag}
             </span>
@@ -129,7 +129,7 @@ const PromptCard = ({ prompt, onEdit, onDelete, onToggleFavorite, onCopy }) => {
 
       {/* Footer */}
       <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-border-subtle">
-        <span className="text-xs text-gray-500 dark:text-text-tertiary">
+        <span className="text-xs text-black dark:text-white">
           Used {prompt.usageCount} {prompt.usageCount === 1 ? 'time' : 'times'}
         </span>
 
@@ -158,7 +158,7 @@ const PromptCard = ({ prompt, onEdit, onDelete, onToggleFavorite, onCopy }) => {
             className="p-1.5 rounded hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             aria-label="Edit prompt"
           >
-            <Edit className="w-4 h-4 text-gray-600 dark:text-text-tertiary" />
+            <Edit className="w-4 h-4 text-black dark:text-white" />
           </button>
 
           {/* Delete Button */}

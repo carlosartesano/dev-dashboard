@@ -80,7 +80,7 @@ const AIChatQuick = () => {
             >
               <Sparkles className="w-3.5 h-3.5" style={{ color: '#10a37f' }} />
             </div>
-            <span className="text-sm font-medium" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+            <span className="text-sm font-medium text-black dark:text-white">
               Chat with ChatGPT
             </span>
           </span>

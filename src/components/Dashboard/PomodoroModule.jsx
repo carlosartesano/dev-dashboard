@@ -170,7 +170,7 @@ const PomodoroModule = () => {
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0 px-6 py-4 border-b border-gray-200 dark:border-border-subtle">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-text-primary">⏱️ Focus Timer</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white">⏱️ Focus Timer</h2>
       </div>
 
       {/* Content - centered vertically */}
@@ -178,10 +178,10 @@ const PomodoroModule = () => {
 
         {/* Timer display - LARGE */}
         <div
-          className="text-7xl font-bold tabular-nums mb-6 tracking-tight"
+          className="text-7xl font-bold tabular-nums mb-6 tracking-tight text-black dark:text-white"
           style={{
             fontFamily: 'ui-monospace, monospace',
-            color: isActive ? 'var(--color-primary)' : undefined
+            color: isActive ? 'var(--color-primary)' : 'var(--color-light-text-primary)'
           }}
         >
           {formatTime(timeLeft)}
@@ -207,15 +207,15 @@ const PomodoroModule = () => {
           </button>
           <button
             onClick={resetTimer}
-            className="px-6 py-3 rounded-lg border border-gray-300 dark:border-white/20 transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
+            className="px-6 py-3 rounded-lg border border-gray-300 dark:border-white/20 transition-colors hover:bg-gray-100 dark:hover:bg-white/5 text-black dark:text-white"
           >
             <RotateCcw className="w-5 h-5" />
           </button>
         </div>
 
         {/* Session counter */}
-        <div className="text-sm mb-4 text-gray-600 dark:text-text-tertiary">
-          Session <span className="font-semibold" style={{ color: 'var(--color-primary)' }}>{timerState.sessionsCompleted}</span> / {SESSIONS_UNTIL_LONG_BREAK} today
+        <div className="text-sm mb-4 text-black dark:text-white">
+          Session <span className="font-semibold text-black dark:text-white" style={{ color: 'var(--color-primary)' }}>{timerState.sessionsCompleted}</span> / {SESSIONS_UNTIL_LONG_BREAK} today
         </div>
 
         {/* Current task */}
@@ -223,17 +223,17 @@ const PomodoroModule = () => {
           <div
             className="w-full max-w-[280px] border border-gray-200 dark:border-white/10 rounded-lg p-3 text-center bg-gray-50 dark:bg-white/5"
           >
-            <div className="text-xs mb-1 text-gray-500 dark:text-text-tertiary">
+            <div className="text-xs mb-1 text-black dark:text-white">
               🎯 Working on:
             </div>
-            <div className="text-sm font-medium truncate text-gray-900 dark:text-text-secondary">
+            <div className="text-sm font-medium truncate text-black dark:text-white">
               {getCurrentTask()}
             </div>
           </div>
         )}
 
         {/* Mode indicator */}
-        <div className="mt-4 text-xs text-gray-500 dark:text-text-tertiary">
+        <div className="mt-4 text-xs text-black dark:text-white">
           {getModeLabel()} · Next: {getNextModeLabel()}
         </div>
       </div>

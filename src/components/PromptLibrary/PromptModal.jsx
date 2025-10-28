@@ -182,7 +182,7 @@ const PromptModal = ({ isOpen, onClose, onSave, editingPrompt }) => {
             {errors.template && (
               <p className="text-red-400 text-sm mt-1">{errors.template}</p>
             )}
-            <p className="text-gray-500 text-xs mt-1">
+            <p className="text-black dark:text-white text-xs mt-1">
               Use [BRACKETS] for variables. Example: [PASTE CODE HERE]
             </p>
           </div>
@@ -213,7 +213,7 @@ const PromptModal = ({ isOpen, onClose, onSave, editingPrompt }) => {
               onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
               placeholder="debugging, error-handling, intermediate (comma-separated)"
             />
-            <p className="text-gray-500 text-xs mt-1">
+            <p className="text-black dark:text-white text-xs mt-1">
               Separate tags with commas
             </p>
           </div>

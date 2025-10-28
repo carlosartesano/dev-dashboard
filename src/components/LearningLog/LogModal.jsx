@@ -246,7 +246,7 @@ const LogModal = ({ isOpen, onClose, onSave, editingLog }) => {
               style={{ resize: 'vertical' }}
             />
             {errors.notes && <p className="text-red-400 text-sm mt-1">{errors.notes}</p>}
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-black dark:text-white mt-1">
               {formData.notes.length} characters (minimum 20)
             </p>
           </div>

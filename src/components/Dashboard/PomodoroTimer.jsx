@@ -179,7 +179,7 @@ const PomodoroTimer = () => {
         style={{
           fontFamily: 'ui-monospace, monospace',
           letterSpacing: '0.05em',
-          color: isActive ? 'var(--color-primary)' : '#ffffff'
+          color: isActive ? 'var(--color-primary)' : 'var(--color-light-text-primary)'
         }}
       >
         {formatTime(timeLeft)}

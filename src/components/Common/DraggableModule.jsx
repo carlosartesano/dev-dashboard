@@ -33,7 +33,7 @@ const DraggableModule = ({
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
             }}
           >
-            <GripVertical className="w-5 h-5 text-gray-400" />
+            <GripVertical className="w-5 h-5 text-black dark:text-white" />
           </div>
         </div>
 

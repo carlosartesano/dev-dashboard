@@ -170,7 +170,7 @@ const PromptLibrary = () => {
       {/* Header */}
       <div className="flex-shrink-0 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">💡 AI Prompt Library</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white">💡 AI Prompt Library</h2>
           <button
             onClick={handleNewPrompt}
             className="btn-primary flex items-center gap-2"
@@ -184,7 +184,7 @@ const PromptLibrary = () => {
         <div className="space-y-3">
           {/* Search Bar */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 dark:text-text-tertiary" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-black dark:text-white" />
             <input
               type="text"
               className="input w-full pl-10"
@@ -225,13 +225,13 @@ const PromptLibrary = () => {
               onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                 showFavoritesOnly
-                  ? 'border-yellow-400 bg-yellow-400 bg-opacity-20 text-gray-900 dark:text-text-primary'
-                  : 'border-gray-300 dark:border-border-subtle text-gray-700 dark:text-text-secondary'
+                  ? 'border-yellow-400 bg-yellow-400 bg-opacity-20 text-black dark:text-white'
+                  : 'border-gray-300 dark:border-border-subtle text-black dark:text-white'
               }`}
             >
               <Star
                 className={`w-4 h-4 ${
-                  showFavoritesOnly ? 'fill-yellow-400 text-yellow-400' : 'text-gray-500 dark:text-text-tertiary'
+                  showFavoritesOnly ? 'fill-yellow-400 text-yellow-400' : 'text-black dark:text-white'
                 }`}
               />
               <span className="text-sm">
@@ -240,7 +240,7 @@ const PromptLibrary = () => {
             </button>
 
             {/* Results Count */}
-            <span className="text-sm text-gray-600 dark:text-text-tertiary ml-auto">
+            <span className="text-sm text-black dark:text-white ml-auto">
               {filteredPrompts.length} {filteredPrompts.length === 1 ? 'prompt' : 'prompts'}
             </span>
           </div>

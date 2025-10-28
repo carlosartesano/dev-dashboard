@@ -81,11 +81,10 @@ const AIAssistant = () => {
       {/* Header */}
       <div className="flex-shrink-0 px-6 py-4 border-b" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">🤖 AI Assistant</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white">🤖 AI Assistant</h2>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="text-sm transition-colors hover:text-white"
-            style={{ color: 'rgba(255, 255, 255, 0.6)' }}
+            className="text-sm text-black dark:text-white transition-colors hover:text-black dark:hover:text-white"
           >
             + Log Conversation
           </button>
@@ -108,8 +107,8 @@ const AIAssistant = () => {
             }}
           >
             <div className="text-3xl mb-3">✨</div>
-            <div className="font-semibold text-lg mb-1">Claude AI</div>
-            <div className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+            <div className="font-semibold text-lg mb-1 text-black dark:text-white">Claude AI</div>
+            <div className="text-xs text-black dark:text-white">
               Open in new tab
             </div>
           </button>
@@ -124,8 +123,8 @@ const AIAssistant = () => {
             }}
           >
             <div className="text-3xl mb-3">💬</div>
-            <div className="font-semibold text-lg mb-1">ChatGPT</div>
-            <div className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+            <div className="font-semibold text-lg mb-1 text-black dark:text-white">ChatGPT</div>
+            <div className="text-xs text-black dark:text-white">
               Open in new tab
             </div>
           </button>
@@ -135,14 +134,13 @@ const AIAssistant = () => {
         {/* Recent conversations */}
         <div className="mb-6">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-semibold uppercase tracking-wide" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-black dark:text-white">
               Recent Conversations
             </h3>
             {conversations.length > 0 && (
               <button
                 onClick={clearAllConversations}
-                className="text-xs transition-colors hover:text-red-400"
-                style={{ color: 'rgba(255, 255, 255, 0.4)' }}
+                className="text-xs text-black dark:text-white transition-colors hover:text-red-500 dark:hover:text-red-400"
               >
                 Clear All
               </button>
@@ -172,10 +170,10 @@ const AIAssistant = () => {
                     {getPlatformIcon(conv.platform)}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium mb-1 truncate" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                    <div className="text-sm font-medium mb-1 truncate text-black dark:text-white">
                       {conv.title}
                     </div>
-                    <div className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                    <div className="text-xs text-black dark:text-white">
                       {formatRelativeTime(conv.timestamp)} · {conv.platform === 'claude' ? 'Claude' : 'ChatGPT'}
                     </div>
                   </div>
@@ -193,8 +191,7 @@ const AIAssistant = () => {
             </div>
           ) : (
             <div
-              className="text-center py-8 text-sm"
-              style={{ color: 'rgba(255, 255, 255, 0.4)' }}
+              className="text-center py-8 text-sm text-black dark:text-white"
             >
               No recent conversations yet
             </div>
@@ -212,8 +209,8 @@ const AIAssistant = () => {
           <div className="flex items-start gap-3">
             <div className="text-2xl">💡</div>
             <div>
-              <div className="text-sm font-medium mb-1">Pro Tip</div>
-              <div className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+              <div className="text-sm font-medium mb-1 text-black dark:text-white">Pro Tip</div>
+              <div className="text-xs text-black dark:text-white">
                 Check your{' '}
                 <button
                   onClick={scrollToPrompts}
@@ -241,7 +238,7 @@ const AIAssistant = () => {
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                <label className="block text-sm mb-2 text-black dark:text-white">
                   Conversation Title
                 </label>
                 <input
@@ -255,7 +252,7 @@ const AIAssistant = () => {
               </div>
 
               <div>
-                <label className="block text-sm mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                <label className="block text-sm mb-2 text-black dark:text-white">
                   Platform
                 </label>
                 <select
@@ -269,7 +266,7 @@ const AIAssistant = () => {
               </div>
 
               <div>
-                <label className="block text-sm mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                <label className="block text-sm mb-2 text-black dark:text-white">
                   Notes (Optional)
                 </label>
                 <textarea

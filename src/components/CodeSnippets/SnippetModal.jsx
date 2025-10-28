@@ -165,7 +165,7 @@ const SnippetModal = ({ isOpen, onClose, onSave, editingSnippet }) => {
                 rows="14"
                 value={formData.code}
                 onChange={(e) => setFormData({ ...formData, code: e.target.value })}
-                style={{ backgroundColor: '#1e1e1e', color: '#d4d4d4', resize: 'vertical' }}
+                style={{ resize: 'vertical' }}
                 placeholder="Enter your code here..."
               />
               {errors.code && <p className="text-red-400 text-sm mt-1">{errors.code}</p>}
@@ -186,7 +186,7 @@ const SnippetModal = ({ isOpen, onClose, onSave, editingSnippet }) => {
                     <code className={`language-${formData.language}`}>{formData.code}</code>
                   </pre>
                 ) : (
-                  <div className="p-4 text-sm text-gray-500 italic">
+                  <div className="p-4 text-sm text-black dark:text-white italic">
                     Code preview will appear here...
                   </div>
                 )}

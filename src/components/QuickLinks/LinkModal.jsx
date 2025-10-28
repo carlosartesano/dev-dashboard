@@ -148,7 +148,7 @@ const LinkModal = ({ isOpen, onClose, onSave, editingLink }) => {
               maxLength={30}
             />
             {errors.title && <p className="text-red-400 text-sm mt-1">{errors.title}</p>}
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-black dark:text-white mt-1">
               {formData.title.length}/30 characters
             </p>
           </div>
@@ -207,16 +207,16 @@ const LinkModal = ({ isOpen, onClose, onSave, editingLink }) => {
                         onError={() => setFaviconError(true)}
                       />
                     ) : (
-                      <LinkIcon className="w-8 h-8 text-gray-400" />
+                      <LinkIcon className="w-8 h-8 text-black dark:text-white" />
                     )}
                   </div>
                   {/* Title */}
-                  <h3 className="text-sm font-medium text-center line-clamp-2 text-gray-200">
+                  <h3 className="text-sm font-medium text-center line-clamp-2 text-black dark:text-white">
                     {formData.title || 'Link Title'}
                   </h3>
                 </>
               ) : (
-                <div className="text-sm text-gray-500 italic">
+                <div className="text-sm text-black dark:text-white italic">
                   Preview will appear here...
                 </div>
               )}

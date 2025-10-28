@@ -56,19 +56,19 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
                 <h3 className="font-bold text-base">{entry.week}</h3>
-                <span className="text-xs text-gray-500">·</span>
-                <span className="text-xs text-gray-500">{entry.date}</span>
+                <span className="text-xs text-black dark:text-white">·</span>
+                <span className="text-xs text-black dark:text-white">{entry.date}</span>
               </div>
 
               {/* Topics Preview */}
-              <p className="text-sm text-gray-400 mb-2">
+              <p className="text-sm text-black dark:text-white mb-2">
                 {entry.topics.slice(0, 3).join(', ')}
                 {entry.topics.length > 3 && '...'}
               </p>
 
               {/* Key Takeaway Preview (when collapsed) */}
               {!isExpanded && (
-                <p className="text-sm text-gray-300 italic line-clamp-2">
+                <p className="text-sm text-black dark:text-white italic line-clamp-2">
                   "{entry.keyTakeaway}"
                 </p>
               )}
@@ -84,9 +84,9 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
               aria-label={isExpanded ? 'Collapse' : 'Expand'}
             >
               {isExpanded ? (
-                <ChevronUp className="w-5 h-5 text-gray-400" />
+                <ChevronUp className="w-5 h-5 text-black dark:text-white" />
               ) : (
-                <ChevronDown className="w-5 h-5 text-gray-400" />
+                <ChevronDown className="w-5 h-5 text-black dark:text-white" />
               )}
             </button>
           </div>
@@ -100,10 +100,10 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
             >
               {/* All Topics */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-2 text-gray-300">Topics Covered:</h4>
+                <h4 className="text-sm font-semibold mb-2 text-black dark:text-white">Topics Covered:</h4>
                 <ul className="list-disc list-inside space-y-1">
                   {entry.topics.map((topic, index) => (
-                    <li key={index} className="text-sm text-gray-400">
+                    <li key={index} className="text-sm text-black dark:text-white">
                       {topic}
                     </li>
                   ))}
@@ -112,8 +112,8 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
 
               {/* Full Notes */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold mb-2 text-gray-300">Notes:</h4>
-                <p className="text-sm text-gray-400 whitespace-pre-wrap leading-relaxed">
+                <h4 className="text-sm font-semibold mb-2 text-black dark:text-white">Notes:</h4>
+                <p className="text-sm text-black dark:text-white whitespace-pre-wrap leading-relaxed">
                   {entry.notes}
                 </p>
               </div>
@@ -121,7 +121,7 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
               {/* Tags */}
               {entry.tags && entry.tags.length > 0 && (
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold mb-2 text-gray-300">Tags:</h4>
+                  <h4 className="text-sm font-semibold mb-2 text-black dark:text-white">Tags:</h4>
                   <div className="flex flex-wrap gap-2">
                     {entry.tags.map((tag, index) => (
                       <span
@@ -154,7 +154,7 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
                     <h4 className="text-sm font-semibold text-amber-300 mb-1">
                       Key Takeaway:
                     </h4>
-                    <p className="text-sm text-gray-300 italic">
+                    <p className="text-sm text-black dark:text-white italic">
                       "{entry.keyTakeaway}"
                     </p>
                   </div>
@@ -163,7 +163,7 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
 
               {/* Timestamps and Actions */}
               <div className="flex items-center justify-between pt-3 border-t" style={{ borderColor: 'var(--color-dark-border)' }}>
-                <div className="text-xs text-gray-500">
+                <div className="text-xs text-black dark:text-white">
                   Created: {formatDate(entry.createdAt)}
                   {entry.updatedAt !== entry.createdAt && (
                     <> · Updated: {formatDate(entry.updatedAt)}</>
@@ -177,7 +177,7 @@ const LogEntry = ({ entry, onEdit, onDelete, isLast }) => {
                     className="p-1.5 rounded hover:bg-white hover:bg-opacity-10 transition-colors"
                     aria-label="Edit entry"
                   >
-                    <Edit className="w-4 h-4 text-gray-400" />
+                    <Edit className="w-4 h-4 text-black dark:text-white" />
                   </button>
 
                   {/* Delete Button */}

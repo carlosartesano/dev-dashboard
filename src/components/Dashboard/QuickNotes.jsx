@@ -102,7 +102,7 @@ const QuickNotes = () => {
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0">
-        <h2 className="text-xl font-bold mb-4">📝 Quick Notes</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white mb-4">📝 Quick Notes</h2>
 
         {/* Textarea */}
         <div className="mb-3">
@@ -127,7 +127,7 @@ const QuickNotes = () => {
       {/* Status and Save Button */}
       <div className="flex items-center justify-between mb-4">
         {/* Save Status */}
-        <div className="text-xs text-gray-600 dark:text-text-tertiary">
+        <div className="text-xs text-black dark:text-white">
           {isSaving ? (
             <span className="flex items-center gap-1">
               💾 <span className="animate-pulse">Saving...</span>
@@ -145,7 +145,7 @@ const QuickNotes = () => {
         <button
           onClick={saveToRecent}
           disabled={!currentNote.trim()}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-border-subtle text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-white/10"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-300 dark:border-border-subtle text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 dark:hover:bg-white/10 text-black dark:text-white"
           aria-label="Save to recent notes"
         >
           <Save className="w-3.5 h-3.5" />
@@ -161,7 +161,7 @@ const QuickNotes = () => {
             {/* Collapsible Header */}
             <button
             onClick={() => setShowAllNotes(!showAllNotes)}
-            className="flex items-center justify-between w-full mb-3 text-sm font-medium text-gray-900 dark:text-text-primary hover:text-gray-700 dark:hover:text-text-secondary transition-colors"
+            className="flex items-center justify-between w-full mb-3 text-sm font-medium text-black dark:text-white hover:text-black dark:hover:text-white transition-colors"
           >
             <span>
               Recent Notes ({notesData.recentNotes.length})
@@ -183,10 +183,10 @@ const QuickNotes = () => {
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-900 dark:text-text-secondary truncate mb-1">
+                    <p className="text-sm text-black dark:text-white truncate mb-1">
                       {truncateText(note.content)}
                     </p>
-                    <p className="text-xs text-gray-500 dark:text-text-tertiary">
+                    <p className="text-xs text-black dark:text-white">
                       {formatRelativeTime(note.createdAt)}
                     </p>
                   </div>
@@ -209,7 +209,7 @@ const QuickNotes = () => {
           {notesData.recentNotes.length > 5 && (
             <button
               onClick={() => setShowAllNotes(!showAllNotes)}
-              className="w-full mt-2 text-xs text-gray-600 dark:text-text-tertiary hover:text-gray-900 dark:hover:text-text-secondary transition-colors"
+              className="w-full mt-2 text-xs text-black dark:text-white hover:text-black dark:hover:text-white transition-colors"
             >
               {showAllNotes ? 'Show Less' : `Show All (${notesData.recentNotes.length})`}
             </button>
@@ -219,7 +219,7 @@ const QuickNotes = () => {
 
         {/* Empty State */}
         {notesData.recentNotes.length === 0 && (
-          <div className="text-center py-6 text-gray-500 dark:text-text-tertiary text-sm">
+          <div className="text-center py-6 text-sm text-black dark:text-white">
             No recent notes yet. Start typing above!
           </div>
         )}

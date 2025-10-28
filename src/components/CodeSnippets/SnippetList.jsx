@@ -4,8 +4,8 @@ const SnippetList = ({ snippets, onEdit, onDelete, onCopy }) => {
   if (snippets.length === 0) {
     return (
       <div className="text-center py-16">
-        <p className="text-gray-400 text-lg mb-2">No snippets found</p>
-        <p className="text-gray-500 text-sm">
+        <p className="text-black dark:text-white text-lg mb-2">No snippets found</p>
+        <p className="text-black dark:text-white text-sm">
           Try adjusting your filters or create a new snippet
         </p>
       </div>

@@ -47,7 +47,7 @@ const LinkCard = ({ link, onEdit, onDelete, onClick }) => {
         className="absolute top-2 right-2 p-1 rounded opacity-0 group-hover:opacity-100 hover:bg-white hover:bg-opacity-10 transition-all z-10"
         aria-label="Edit link"
       >
-        <Edit className="w-3.5 h-3.5 text-gray-400" />
+        <Edit className="w-3.5 h-3.5 text-black dark:text-white" />
       </button>
 
       {/* Favicon */}
@@ -60,13 +60,13 @@ const LinkCard = ({ link, onEdit, onDelete, onClick }) => {
             onError={() => setImgError(true)}
           />
         ) : (
-          <LinkIcon className="w-8 h-8 text-gray-400" />
+          <LinkIcon className="w-8 h-8 text-black dark:text-white" />
         )}
       </div>
 
       {/* Title */}
       <h3
-        className="text-sm font-medium text-center line-clamp-2 text-gray-200"
+        className="text-sm font-medium text-center line-clamp-2 text-black dark:text-white"
         style={{
           minHeight: '2.5rem',
           maxWidth: '100%',
@@ -81,7 +81,7 @@ const LinkCard = ({ link, onEdit, onDelete, onClick }) => {
 
       {/* Click Counter - Subtle, Bottom */}
       {link.clicks > 0 && (
-        <div className="absolute bottom-1 text-xs text-gray-500">
+        <div className="absolute bottom-1 text-xs text-black dark:text-white">
           {link.clicks} {link.clicks === 1 ? 'click' : 'clicks'}
         </div>
       )}

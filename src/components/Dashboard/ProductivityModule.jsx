@@ -6,7 +6,7 @@ const ProductivityModule = () => {
     <div className="card h-[400px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0 pb-3 border-b" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
-        <h2 className="text-xl font-bold">🎯 Productivity & AI</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white">🎯 Productivity & AI</h2>
       </div>
 
       {/* Split content - 60/40 ratio */}

@@ -36,11 +36,11 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
-          <h3 className="font-bold text-base mb-2 text-gray-900 dark:text-text-primary">{snippet.title}</h3>
+          <h3 className="font-bold text-base mb-2 text-black dark:text-white">{snippet.title}</h3>
           <div className="flex items-center gap-2 flex-wrap">
             <span
               className={`inline-block px-2 py-0.5 rounded text-xs border ${
-                difficultyColors[snippet.difficulty] || 'bg-gray-500/20 text-gray-400'
+                difficultyColors[snippet.difficulty] || 'bg-gray-500/20 text-black dark:text-white'
               }`}
             >
               {snippet.difficulty}
@@ -54,7 +54,7 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
 
       {/* Description */}
       {snippet.description && (
-        <p className="text-sm text-gray-600 dark:text-text-tertiary mb-3">{snippet.description}</p>
+        <p className="text-sm text-black dark:text-white mb-3">{snippet.description}</p>
       )}
 
       {/* Code Block with Syntax Highlighting */}
@@ -74,7 +74,7 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
           {snippet.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded text-xs bg-gray-200 dark:bg-white/10 text-gray-600 dark:text-text-tertiary"
+              className="px-2 py-0.5 rounded text-xs bg-gray-200 dark:bg-white/10 text-black dark:text-white"
             >
               {tag}
             </span>
@@ -84,7 +84,7 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
 
       {/* Footer */}
       <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-border-subtle">
-        <span className="text-xs text-gray-500 dark:text-text-tertiary">
+        <span className="text-xs text-black dark:text-white">
           Copied {snippet.copiedCount} {snippet.copiedCount === 1 ? 'time' : 'times'}
         </span>
 
@@ -113,7 +113,7 @@ const SnippetCard = ({ snippet, onEdit, onDelete, onCopy }) => {
             className="p-1.5 rounded hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             aria-label="Edit snippet"
           >
-            <Edit className="w-4 h-4 text-gray-600 dark:text-text-tertiary" />
+            <Edit className="w-4 h-4 text-black dark:text-white" />
           </button>
 
           {/* Delete Button */}

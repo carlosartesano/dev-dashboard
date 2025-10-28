@@ -73,7 +73,7 @@ const QuickLinks = () => {
       {/* Header */}
       <div className="flex-shrink-0 mb-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold">🔗 Quick Links</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white">🔗 Quick Links</h2>
           <button
             onClick={handleNewLink}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm transition-all hover:bg-white hover:bg-opacity-10"
@@ -101,7 +101,7 @@ const QuickLinks = () => {
           </div>
         ) : (
           /* Empty State */
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12 text-black dark:text-white">
             <p className="text-sm mb-2">No links yet.</p>
             <p className="text-xs">Add your favorite development resources!</p>
           </div>

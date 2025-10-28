@@ -80,12 +80,11 @@ function App() {
           <div className="flex items-center justify-between">
             <div>
               <h1
-                className="text-2xl sm:text-3xl font-bold"
-                style={{ color: 'var(--color-primary)' }}
+                className="text-2xl sm:text-3xl font-bold text-black dark:text-white"
               >
                 Dev Dashboard
               </h1>
-              <p className="text-xs sm:text-sm mt-1 text-gray-600 dark:text-text-tertiary">
+              <p className="text-xs sm:text-sm mt-1 text-black dark:text-gray-500">
                 Your personal development command center
               </p>
             </div>
@@ -93,7 +92,7 @@ function App() {
               {/* Reset Layout Button */}
               <button
                 onClick={resetOrder}
-                className="text-sm text-gray-600 hover:text-gray-900 dark:text-text-tertiary dark:hover:text-text-secondary transition-colors flex items-center gap-1.5"
+                className="text-sm text-black hover:text-black dark:text-gray-300 dark:hover:text-gray-100 transition-colors flex items-center gap-1.5"
                 title="Reset to default layout"
               >
                 <RotateCcw className="w-4 h-4" />
