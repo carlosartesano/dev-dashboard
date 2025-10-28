@@ -121,7 +121,7 @@ const LearningLog = () => {
       {/* Header */}
       <div className="flex-shrink-0 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-black dark:text-white">📚 Learning Log</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white text-center">📚 Learning Log</h2>
           <button
             onClick={handleNewLog}
             className="btn-primary flex items-center gap-2"

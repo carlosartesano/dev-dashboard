@@ -102,7 +102,7 @@ const QuickNotes = () => {
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0">
-        <h2 className="text-xl font-bold text-black dark:text-white mb-4">📝 Quick Notes</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white mb-4 text-center">📝 Quick Notes</h2>
 
         {/* Textarea */}
         <div className="mb-3">

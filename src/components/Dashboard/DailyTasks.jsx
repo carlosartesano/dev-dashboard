@@ -51,7 +51,7 @@ const DailyTasks = () => {
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
       <div className="flex-shrink-0">
-        <h2 className="text-xl font-bold text-black dark:text-white mb-4">🎯 Today's Focus</h2>
+        <h2 className="text-xl font-bold text-black dark:text-white mb-4 text-center">🎯 Today's Focus</h2>
 
         {/* Input Section */}
         <div className="flex gap-2 mb-4">

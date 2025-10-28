@@ -169,8 +169,8 @@ const PomodoroModule = () => {
   return (
     <div className="card h-[500px] flex flex-col">
       {/* Header */}
-      <div className="flex-shrink-0 px-6 py-4 border-b border-gray-200 dark:border-border-subtle">
-        <h2 className="text-xl font-bold text-black dark:text-white">⏱️ Focus Timer</h2>
+      <div className="flex-shrink-0">
+        <h2 className="text-xl font-bold text-black dark:text-white text-center mb-4">⏱️ Focus Timer</h2>
       </div>
 
       {/* Content - centered vertically */}

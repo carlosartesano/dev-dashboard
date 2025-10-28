@@ -1,0 +1,25 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Favicon version - simplified for small sizes -->
+  
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="16" height="16" rx="3" fill="url(#faviconGradient)"/>
+  
+  <!-- Simplified grid pattern -->
+  <g fill="white" opacity="0.9">
+    <!-- 2x2 grid for clarity at small size -->
+    <rect x="3" y="3" width="4" height="4" rx="0.5"/>
+    <rect x="9" y="3" width="4" height="4" rx="0.5"/>
+    <rect x="3" y="9" width="4" height="4" rx="0.5"/>
+    <rect x="9" y="9" width="4" height="4" rx="0.5"/>
+  </g>
+  
+  <!-- Center accent -->
+  <circle cx="8" cy="8" r="1" fill="white" opacity="0.8"/>
+</svg>

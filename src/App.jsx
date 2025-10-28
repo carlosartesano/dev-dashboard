@@ -79,11 +79,14 @@ function App() {
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1
-                className="text-2xl sm:text-3xl font-bold text-black dark:text-white"
-              >
-                Dev Dashboard
-              </h1>
+              <div className="flex items-center gap-3">
+                <img src="/logo.svg" alt="Dev Dashboard" className="w-8 h-8" />
+                <h1
+                  className="text-2xl sm:text-3xl font-bold text-black dark:text-white"
+                >
+                  Dev Dashboard
+                </h1>
+              </div>
               <p className="text-xs sm:text-sm mt-1 text-black dark:text-gray-500">
                 Your personal development command center
               </p>

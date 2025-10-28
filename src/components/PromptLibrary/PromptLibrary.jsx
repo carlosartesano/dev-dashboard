@@ -170,7 +170,7 @@ const PromptLibrary = () => {
       {/* Header */}
       <div className="flex-shrink-0 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-black dark:text-white">💡 AI Prompt Library</h2>
+          <h2 className="text-xl font-bold text-black dark:text-white text-center">💡 AI Prompt Library</h2>
           <button
             onClick={handleNewPrompt}
             className="btn-primary flex items-center gap-2"
